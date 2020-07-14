@@ -1,0 +1,11 @@
+# Intellij
+.idea/
+.idea
+out/
+.idea_modules/
+
+### Gradle ###
+.gradle
+gradle
+build/
+history/

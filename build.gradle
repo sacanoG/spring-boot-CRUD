@@ -1,0 +1,86 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.2.2.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'jacoco'
+
+group = "io.quind"
+version = "1.0.0"
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs '../calculator-lib/build/libs'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jacoco {
+    toolVersion = "0.8.5"
+    reportsDir = file("$buildDir/customJacocoReportDir")
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.5
+            }
+        }
+
+        rule {
+            enabled = false
+            element = 'CLASS'
+            includes = ['org.gradle.*']
+
+            limit {
+                counter = 'LINE'
+                value = 'TOTALCOUNT'
+                maximum = 0.3
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-web:2.2.4.RELEASE")
+    implementation("org.springframework:spring-jdbc:5.2.2.RELEASE")
+    implementation("org.springframework.boot:spring-boot-starter-jdbc:2.2.4.RELEASE")
+    implementation("mysql:mysql-connector-java:8.0.18")
+    implementation("com.googlecode.json-simple:json-simple:1.1")
+    implementation("org.json:json:20190722")
+
+    implementation name: "calculator-lib-1.0.0"
+
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine")
+    testImplementation("org.junit.platform:junit-platform-runner")
+    testImplementation("org.mockito:mockito-junit-jupiter")
+
+    compile group: 'com.github.ulisesbocchio', name: 'jasypt-spring-boot-starter', version: '2.1.2'
+}
