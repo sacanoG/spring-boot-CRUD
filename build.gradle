@@ -19,9 +19,6 @@ version = "1.0.0"
 
 repositories {
     mavenCentral()
-    flatDir {
-        dirs '../calculator-lib/build/libs'
-    }
 }
 
 test {
