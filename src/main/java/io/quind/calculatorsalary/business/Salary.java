@@ -1,7 +1,5 @@
 package io.quind.calculatorsalary.business;
 
-import io.quind.calculator.Calculator;
-
 import java.text.DecimalFormat;
 
 public class Salary {
@@ -11,8 +9,6 @@ public class Salary {
     private double tax;
 
     private static DecimalFormat salaryStandardFormat = new DecimalFormat("#.##");
-
-    private Calculator calculator = new Calculator();
 
     public double getTransportAid() {
         return transportAid;
@@ -40,11 +36,11 @@ public class Salary {
 
     public void calculateTransportAid()
     {
-        this.transportAid = Double.parseDouble(salaryStandardFormat.format(calculator.multi(baseSalary, 0.1)));
+        this.transportAid = Double.parseDouble(salaryStandardFormat.format(baseSalary*0.1));
     }
 
     public void calculateTax()
     {
-        this.tax = Double.parseDouble(salaryStandardFormat.format(calculator.multi(baseSalary,0.2)));
+        this.tax = Double.parseDouble(salaryStandardFormat.format(baseSalary*0.2));
     }
 }
