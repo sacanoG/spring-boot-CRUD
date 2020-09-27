@@ -1,6 +1,6 @@
-package io.quind.calculatorsalary.data;
+package co.com.sancanoga.calculatorsalary.data;
 
-import io.quind.calculatorsalary.business.Employee;
+import co.com.sancanoga.calculatorsalary.business.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

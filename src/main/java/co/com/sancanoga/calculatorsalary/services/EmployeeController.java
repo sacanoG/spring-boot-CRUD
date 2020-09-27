@@ -1,9 +1,9 @@
-package io.quind.calculatorsalary.services;
+package co.com.sancanoga.calculatorsalary.services;
 
-import io.quind.calculatorsalary.business.Employee;
-import io.quind.calculatorsalary.business.IRegisterEmployeeUseCase;
-import io.quind.calculatorsalary.data.IEmployeeRepository;
-import io.quind.calculatorsalary.util.ApiHeaders;
+import co.com.sancanoga.calculatorsalary.business.Employee;
+import co.com.sancanoga.calculatorsalary.business.IRegisterEmployeeUseCase;
+import co.com.sancanoga.calculatorsalary.data.IEmployeeRepository;
+import co.com.sancanoga.calculatorsalary.util.ApiHeaders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;

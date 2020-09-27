@@ -1,8 +1,8 @@
-package io.quind.calculatorsalary.services;
+package co.com.sancanoga.calculatorsalary.services;
 
-import io.quind.calculatorsalary.business.Salary;
-import io.quind.calculatorsalary.data.ISalaryRepository;
-import io.quind.calculatorsalary.util.ApiHeaders;
+import co.com.sancanoga.calculatorsalary.business.Salary;
+import co.com.sancanoga.calculatorsalary.data.ISalaryRepository;
+import co.com.sancanoga.calculatorsalary.util.ApiHeaders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package io.quind.calculatorsalary.util;
+package co.com.sancanoga.calculatorsalary.util;
 
 import org.springframework.http.HttpHeaders;
 

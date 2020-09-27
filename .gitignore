@@ -6,6 +6,5 @@ out/
 
 ### Gradle ###
 .gradle
-gradle
 build/
 history/

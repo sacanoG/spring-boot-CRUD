@@ -1,6 +1,6 @@
-package io.quind.calculatorsalary.gateway;
+package co.com.sancanoga.calculatorsalary.gateway;
 
-import io.quind.calculatorsalary.data.IGovernmentRepository;
+import co.com.sancanoga.calculatorsalary.data.IGovernmentRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;

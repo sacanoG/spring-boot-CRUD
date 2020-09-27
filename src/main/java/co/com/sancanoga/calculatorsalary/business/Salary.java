@@ -1,4 +1,4 @@
-package io.quind.calculatorsalary.business;
+package co.com.sancanoga.calculatorsalary.business;
 
 import java.text.DecimalFormat;
 

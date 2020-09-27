@@ -1,4 +1,4 @@
-package io.quind.calculatorsalary;
+package co.com.sancanoga.calculatorsalary;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

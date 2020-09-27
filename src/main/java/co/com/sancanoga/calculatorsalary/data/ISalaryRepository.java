@@ -1,4 +1,4 @@
-package io.quind.calculatorsalary.data;
+package co.com.sancanoga.calculatorsalary.data;
 
 public interface ISalaryRepository {
 
